@@ -12,15 +12,15 @@ logging.set_verbosity(logging.ERROR)
 # replace "game_pieces" in all the lines with your roboflow DataSet project name that you downloaded in step 3
 # replace "cell" with your object name, you can add more ojects just add ['<object>'] to add more objects add to the brackets ['<object1>', '<object2>','<object3>']
 train_data = object_detector.DataLoader.from_pascal_voc(
-    'game_pieces/train', 
-    'game_pieces/train',
-    ['cell']
+    'fuel-detection-k75qd/train', 
+    'fuel-detection-k75qd/train',
+    ['fuel']
 )
 
 val_data = object_detector.DataLoader.from_pascal_voc(
-    'game_pieces/valid',
-    'game_pieces/valid',
-    ['cell']
+    'fuel-detection-k75qd/valid',
+    'fuel-detection-k75qd/valid',
+    ['fuel']
 )
 
 spec = model_spec.get('efficientdet_lite0')
