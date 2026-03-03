@@ -24,16 +24,15 @@ val_data = object_detector.DataLoader.from_pascal_voc(
 )
 
 # ✅ Use efficientdet_lite2 for better accuracy (vs lite0)
-spec = model_spec.get('efficientdet_lite2')
+spec = model_spec.get('efficientdet_lite0')  # much faster, still good
 
-# ✅ Train with improved settings
 model = object_detector.create(
     train_data,
     model_spec=spec,
-    batch_size=8,           # was 4, bigger batch = better training
+    batch_size=4,
     train_whole_model=True,
-    epochs=50,              # was 20, more epochs = better accuracy
-    validation_data=val_data
+    epochs=25,
+    validation_data=None   # skip validation during training to save time
 )
 
 # ✅ Export the model
