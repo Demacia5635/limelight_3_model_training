@@ -30,7 +30,7 @@ model = object_detector.create(
     model_spec=spec,
     batch_size=4,
     train_whole_model=True,
-    epochs=25,
+    epochs=12,
     validation_data=None
 )
 
