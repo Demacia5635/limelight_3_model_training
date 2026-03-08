@@ -15,12 +15,12 @@ logging.set_verbosity(logging.ERROR)
 train_data = object_detector.DataLoader.from_pascal_voc(
     '/content/FRC-2026-Fuel-2/train',
     '/content/FRC-2026-Fuel-2/train',
-    ['fuel']
+    ['Fuels']
 )
 val_data = object_detector.DataLoader.from_pascal_voc(
     '/content/FRC-2026-Fuel-2/valid',
     '/content/FRC-2026-Fuel-2/valid',
-    ['fuel']
+    ['Fuels']
 )
 
 spec = model_spec.get('efficientdet_lite0')
