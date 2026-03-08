@@ -13,13 +13,13 @@ logging.set_verbosity(logging.ERROR)
 
 # Load training and validation data
 train_data = object_detector.DataLoader.from_pascal_voc(
-    'gameobjects/train',
-    'gameobjects/train',
+    '/content/FRC-2026-Fuel-2/train',
+    '/content/FRC-2026-Fuel-2/train',
     ['fuel']
 )
 val_data = object_detector.DataLoader.from_pascal_voc(
-    'gameobjects/valid',
-    'gameobjects/valid',
+    '/content/FRC-2026-Fuel-2/valid',
+    '/content/FRC-2026-Fuel-2/valid',
     ['fuel']
 )
 
