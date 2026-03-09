@@ -13,14 +13,14 @@ logging.set_verbosity(logging.ERROR)
 
 # Load training and validation data
 train_data = object_detector.DataLoader.from_pascal_voc(
-    '/content/Fuel-Detection-1/train',
-    '/content/Fuel-Detection-1/train',
-    ['Fuel', 'Bumper']
+    '/content/2026-FRC-Rebuilt-Fuel-Detection-1/train',
+    '/content/2026-FRC-Rebuilt-Fuel-Detection-1/train',
+    ['Fuels']
 )
 val_data = object_detector.DataLoader.from_pascal_voc(
-    '/content/Fuel-Detection-1/valid',
-    '/content/Fuel-Detection-1/valid',
-    ['Fuel', 'Bumper']
+    '/content/2026-FRC-Rebuilt-Fuel-Detection-1/valid',
+    '/content/2026-FRC-Rebuilt-Fuel-Detection-1/valid',
+    ['Fuels']
 )
 spec = model_spec.get('efficientdet_lite0')
 
